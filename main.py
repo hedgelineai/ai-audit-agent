@@ -16,12 +16,18 @@ HTML = """
         <input type="text" name="url" required>
         <input type="submit" value="Generate Audit">
     </form>
+
     {% if pdf_path %}
         <p>✅ Audit ready: <a href="{{ pdf_path }}">Download PDF</a></p>
+        <p>📅 Ready to improve your site?</p>
+        <a href="https://calendly.com/hedgelineai/free-ai-website-audit-call" target="_blank">
+            <button style="padding: 10px 20px; font-size: 16px;">Book Free Call</button>
+        </a>
     {% endif %}
 </body>
 </html>
 """
+
 
 def run_audit(url):
     return f"""
