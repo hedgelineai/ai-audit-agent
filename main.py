@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template_string, send_file
+from flask import render_template_string
 from fpdf import FPDF
 from datetime import datetime
 import os
@@ -72,7 +72,7 @@ def index():
         pdf.output(filepath)
         pdf_path = f"/static/{filename}"
     
-    return render_template_string(HTML, pdf_path=pdf_path)
+   return render_template_string(HTML, pdf_path=pdf_path)
 
 @app.route("/static/<filename>")
 def download(filename):
