@@ -2,6 +2,7 @@ from flask import Flask, request, render_template_string, send_file
 from fpdf import FPDF
 from datetime import datetime
 import os
+os.makedirs("static", exist_ok=True)
 
 app = Flask(__name__)
 
